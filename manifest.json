@@ -15,5 +15,19 @@
     },
 
     // Pick one (or none)
-    "browser_action": {...},
+    "browser_action": {
+        // optional
+        "default_icon": {
+            // optional
+            "16": "images/icons/icon-16-2.png",
+            // optional
+            "24": "images/icons/icon-24-2.png",
+            // optional
+            "32": "images/icons/icon-32-2.png"
+        },
+        // optional; shown in tooltip
+        "default_title": "Google Mail",
+        // optional
+        "default_popup": "html/popup.html"
+    }
 }
