@@ -1,0 +1,81 @@
+// Required
+manifest_version
+name
+version
+
+// Recommended
+default_locale
+description
+icons
+
+    // Pick one (or none)
+    browser_action
+    page_action
+
+    // Optional
+    author
+    automation
+    background
+    // Recommended
+    persistent
+    },
+    background_page
+    chrome_settings_overrides
+    chrome_ui_overrides
+    bookmarks_ui
+    remove_bookmark_shortcut
+    remove_button
+    }
+    },
+    chrome_url_overrides
+    commands
+    content_capabilities
+    content_scripts
+    content_security_policy
+    converted_from_user_script
+    current_locale
+    devtools_page
+    event_rules
+    externally_connectable
+    matches
+    },
+    file_browser_handlers
+    file_system_provider_capabilities
+    configurable
+    multiple_mounts
+    source
+    },
+    homepage_url
+    import
+    incognito
+    input_components
+    key
+    minimum_chrome_version
+    nacl_modules
+    oauth2
+    offline_enabled
+    omnibox
+    keyword
+    },
+    optional_permissions
+    options_page
+    options_ui
+    chrome_style
+    page
+    },
+    permissions
+    platforms
+    plugins
+    requirements
+    sandbox
+    short_name
+    signature
+    spellcheck
+    storage
+    managed_schema
+    },
+    system_indicator
+    tts_engine
+    update_url
+    version_name
+    web_accessible_resources
