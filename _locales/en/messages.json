@@ -7,5 +7,18 @@
     },
     "manifest_browser_action_default_title": {
         "message": "Google Chrome extension test"
+    },
+    "popup_bye": {
+        "message": "Goodbye, $USER$. Come back to $OUR_SITE$ soon!",
+        "description": "Say goodbye to the user",
+        "placeholders": {
+            "USER": {
+                "content": "$1",
+                "example": "John"
+            },
+            "OUR_SITE": {
+                "content": "$2"
+            }
+        }
     }
 }
