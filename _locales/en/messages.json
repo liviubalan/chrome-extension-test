@@ -1,11 +1,11 @@
 {
     "manifest_name": {
-        "message": "SortProds"
+        "message": "GoogleChromeExtensionTest"
     },
     "manifest_description": {
-        "message": "Sort product cells on shopping websites."
+        "message": "Google Chrome extension test."
     },
     "manifest_browser_action_default_title": {
-        "message": "SortProds shopping tool"
+        "message": "Google Chrome extension test"
     }
 }
