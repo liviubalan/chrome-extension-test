@@ -28,6 +28,6 @@
         // optional; shown in tooltip
         "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
-        "default_popup": "html/popup.html"
+        "default_popup": "html/popup-browser_action.html"
     }
 }
