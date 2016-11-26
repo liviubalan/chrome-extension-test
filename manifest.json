@@ -8,10 +8,10 @@
     "default_locale": "en",
     "description": "__MSG_manifest_description__",
     "icons": {
-        "16": "images/icons/icon-16.png",
-        "32": "images/icons/icon-32.png",
-        "48": "images/icons/icon-48.png",
-        "128": "images/icons/icon-128.png"
+        "16": "images/icons/icon-1-16.png",
+        "32": "images/icons/icon-1-32.png",
+        "48": "images/icons/icon-1-48.png",
+        "128": "images/icons/icon-1-128.png"
     },
 
     // Pick one (or none)
@@ -19,11 +19,11 @@
         // optional
         "default_icon": {
             // optional
-            "16": "images/icons/icon-16-2.png",
+            "16": "images/icons/icon-2-16.png",
             // optional
-            "24": "images/icons/icon-24-2.png",
+            "24": "images/icons/icon-2-24.png",
             // optional
-            "32": "images/icons/icon-32-2.png"
+            "32": "images/icons/icon-2-32.png"
         },
         // optional; shown in tooltip
         "default_title": "Google Mail",
