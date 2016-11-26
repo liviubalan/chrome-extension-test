@@ -1,7 +1,7 @@
     accessibilityFeatures
     alarms
     bookmarks
-    browserAction
+browserAction
     browsingData
     certificateProvider
     commands

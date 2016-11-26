@@ -26,7 +26,7 @@
             "32": "images/icons/icon-2-32.png"
         },
         // optional; shown in tooltip
-        "default_title": "Google Mail",
+        "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
         "default_popup": "html/popup.html"
     }

@@ -8,8 +8,8 @@ default_locale
 description
 icons
 
-    // Pick one (or none)
-    browser_action
+// Pick one (or none)
+browser_action
     page_action
 
     // Optional

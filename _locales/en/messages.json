@@ -4,5 +4,8 @@
     },
     "manifest_description": {
         "message": "Sort product cells on shopping websites."
+    },
+    "manifest_browser_action_default_title": {
+        "message": "SortProds shopping tool"
     }
 }
