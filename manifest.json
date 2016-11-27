@@ -15,7 +15,7 @@
     },
 
     // Pick one (or none)
-    "browser_action": {
+    /*"browser_action": {
         // optional
         "default_icon": {
             // optional
@@ -29,5 +29,20 @@
         "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
         "default_popup": "html/popup-browser_action.html"
+    },*/
+    "page_action": {
+        // optional
+        "default_icon": {
+            // optional
+            "16": "images/icons/icon-2-16.png",
+            // optional
+            "24": "images/icons/icon-2-24.png",
+            // optional
+            "32": "images/icons/icon-2-32.png"
+        },
+        // optional; shown in tooltip
+        "default_title": "__MSG_manifest_browser_action_default_title__",
+        // optional
+        "default_popup": "html/popup-page_action.html"
     }
 }
