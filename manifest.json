@@ -49,7 +49,7 @@
     // Optional
     // Doesn't appear anywhere
     "author": "Liviu Balan",
-    /*// Error
+    /*// Error: 'automation' requires dev channel or newer, but this is the stable channel
     "automation": "Automation",*/
     "background": {
         /*"scripts": [
@@ -58,7 +58,24 @@
         "page": "html/background.html"
         /*// Recommended
         "persistent": false*/
+    },
+    /*// Error: 'background_page' requires manifest version of 1 or lower
+    "background_page": "html/background.html",*/
+    /*// Error: Not allowed for Linux
+    "chrome_settings_overrides": {
+        "homepage": "http://www.homepage.com"
+    }*/
+    /*// Error: chrome_ui_overrides' requires dev channel or newer, but this is the stable channel
+    "chrome_ui_overrides": {
+        "bookmarks_ui": {
+            "remove_bookmark_shortcut": true,
+            "remove_button": true
+        }
+    }*/
+    "chrome_url_overrides" : {
+        // Substitute only one page
+        //"bookmarks": "html/url_overrides.html"
+        //"history": "html/url_overrides.html"
+        "newtab": "html/url_overrides.html"
     }
-    /*// Error
-    "background_page": "test",*/
 }
