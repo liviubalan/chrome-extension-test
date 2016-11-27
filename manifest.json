@@ -44,5 +44,21 @@
         "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
         "default_popup": "html/popup-page_action.html"
+    },
+
+    // Optional
+    // Doesn't appear anywhere
+    "author": "Liviu Balan",
+    /*// Error
+    "automation": "Automation",*/
+    "background": {
+        /*"scripts": [
+            "js/background.js"
+        ],*/
+        "page": "html/background.html"
+        /*// Recommended
+        "persistent": false*/
     }
+    /*// Error
+    "background_page": "test",*/
 }

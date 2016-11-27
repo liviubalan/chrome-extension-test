@@ -61,7 +61,8 @@ files. Also some other resources such as [JavaScript](https://en.wikipedia.org/w
 
 Based on the current step of the extension development you can use the following Google Chrome builtin tools:
 * **Inspect**: **Right click** on the current section (toolbar icon, page, etc) and choose **Inspect**.
-* **Extension options** from **chrome://extensions/** for the current extension: Reload button.
+* **Extension options** from **chrome://extensions/** for the current extension: **Reload (Ctrl+R)**, **Details**,
+**Inspect views**.
 * If you're using [PhpStorm](https://www.jetbrains.com/phpstorm/) you can add the `chrome` external library in order to
 increase your productivity. Follow this
 [stackoverflow question](http://stackoverflow.com/questions/13997468/how-do-i-use-webstorm-for-chrome-extension-development)
