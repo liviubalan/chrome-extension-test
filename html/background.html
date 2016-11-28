@@ -9,6 +9,13 @@ This file is loaded when the extension is loaded (not on the web page load)
     <title>Background</title>
     <link rel="stylesheet" type="text/css" href="../css/background.css">
     <script src="../js/background.js"></script>
+    <script>
+        /**
+         * Error: Refused to execute inline script because it violates the following Content Security Policy directive.
+         * See https://developer.chrome.com/extensions/contentSecurityPolicy for more details
+         */
+        alert("inline script");
+    </script>
 </head>
 
 <body>

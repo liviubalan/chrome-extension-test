@@ -120,4 +120,8 @@
             "run_at": "document_end"
         }
     ]
+    /*// Doesn't do anything
+    "converted_from_user_script": "converted_from_user_script",*/
+    /*// Doesn't do anything
+    "current_locale": "ro",*/
 }
