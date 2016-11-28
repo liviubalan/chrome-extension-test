@@ -15,7 +15,7 @@
     },
 
     // Pick one (or none)
-    /*"browser_action": {
+    "browser_action": {
         // optional
         "default_icon": {
             // optional
@@ -29,8 +29,8 @@
         "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
         "default_popup": "html/popup-browser_action.html"
-    },*/
-    "page_action": {
+    },
+    /*"page_action": {
         // optional
         "default_icon": {
             // optional
@@ -44,7 +44,7 @@
         "default_title": "__MSG_manifest_browser_action_default_title__",
         // optional
         "default_popup": "html/popup-page_action.html"
-    },
+    },*/
 
     // Optional
     // Doesn't appear anywhere
@@ -109,5 +109,15 @@
                 "mac": "Alt+Shift+P"
             }
         }
-    }
+    },
+    /*// Error: 'content_capabilities' is not allowed for specified extension ID
+    "content_capabilities": "content_capabilities",*/
+    "content_scripts": [
+        {
+            "matches": ["http://www.emag.ro/*"],
+            "css": ["css/content_scripts.css"],
+            "js": ["js/lib/jquery-3.1.1.min.js", "js/content_scripts.js"],
+            "run_at": "document_end"
+        }
+    ]
 }
