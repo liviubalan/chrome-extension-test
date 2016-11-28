@@ -4,7 +4,7 @@
 browserAction
     browsingData
     certificateProvider
-    commands
+commands
     contentSettings
     contextMenus
     cookies

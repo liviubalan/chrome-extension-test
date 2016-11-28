@@ -3,3 +3,7 @@
  * This file is loaded when the extension is loaded (not on the web page load)
  */
 alert("background.js loaded");
+
+chrome.commands.onCommand.addListener(function (command) {
+    alert("Command: " + command);
+});

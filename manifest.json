@@ -77,5 +77,37 @@
         //"bookmarks": "html/url_overrides.html"
         //"history": "html/url_overrides.html"
         "newtab": "html/url_overrides.html"
+    },
+    // Use "Ctrl+Shift+Y" or "Ctrl+Shift+5" on Linux
+    "commands": {
+        "toggle-feature-foo": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y"
+            },
+            "description": "Toggle feature foo"
+        },
+        "toggle-feature-foo-global": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+5"
+            },
+            "description": "Toggle feature foo (global)",
+            "global": true
+        },
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y",
+                "chromeos": "Ctrl+Shift+U",
+                "linux": "Ctrl+Shift+J"
+            }
+        },
+        "_execute_page_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+E",
+                "windows": "Alt+Shift+P",
+                "mac": "Alt+Shift+P"
+            }
+        }
     }
 }
