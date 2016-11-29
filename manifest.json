@@ -143,5 +143,20 @@
     /*// No doc
     "input_components": ""*/
     /*"key": "icggacnennbdcdplekpajjokkabkgdih",*/
-    "minimum_chrome_version": "54.0.2840.100"
+    "minimum_chrome_version": "54.0.2840.100",
+    /*// TODO: research on this when it's needed
+    "nacl_modules": [
+        {
+            "path": "OpenOfficeViewer.nmf",
+            "mime_type": "application/vnd.oasis.opendocument.spreadsheet"
+        }
+    ],*/
+    /*// No doc. Error: Invalid value for 'oauth2.client_id'
+    "oauth2": "",*/
+    /*// TODO: research on this when it's needed
+    "offline_enabled": false,*/
+    // To test this open a new tab and type "eemag" and hit tab key
+    "omnibox": {
+        "keyword": "eemag"
+    }
 }

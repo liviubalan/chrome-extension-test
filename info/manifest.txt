@@ -46,12 +46,11 @@ incognito
 input_components
 key
 minimum_chrome_version
-    nacl_modules
-    oauth2
-    offline_enabled
-    omnibox
-    keyword
-    },
+nacl_modules
+oauth2
+offline_enabled
+omnibox
+keyword
     optional_permissions
     options_page
     options_ui
