@@ -1,0 +1,16 @@
+<!--
+An instance of the devtools_page specified in your extension's manifest is created for every DevTools window opened.
+The chrome.devtools.* API modules are available only to the pages loaded within the DevTools window. Content scripts
+and other extension pages do not have these APIs. Thus, the APIs are available only through the lifetime of the
+DevTools window.
+
+In order to test this: Inspect / click on a node / Filters
+-->
+<!doctype html>
+<html>
+<head>
+    <script src="../js/devtools.js"></script>
+</head>
+<body>
+</body>
+</html>

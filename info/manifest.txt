@@ -31,7 +31,7 @@ content_scripts
 content_security_policy
 converted_from_user_script
 current_locale
-    devtools_page
+devtools_page
     event_rules
     externally_connectable
     matches

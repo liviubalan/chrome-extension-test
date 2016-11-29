@@ -11,9 +11,9 @@ commands
     debugger
     declarativeContent
     desktopCapture
-    devtools.inspectedWindow
-    devtools.network
-    devtools.panels
+devtools.inspectedWindow
+devtools.network
+devtools.panels
     documentScan
     downloads
     enterprise.deviceAttributes
