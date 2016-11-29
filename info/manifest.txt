@@ -32,22 +32,20 @@ content_security_policy
 converted_from_user_script
 current_locale
 devtools_page
-    event_rules
-    externally_connectable
-    matches
-    },
-    file_browser_handlers
-    file_system_provider_capabilities
-    configurable
-    multiple_mounts
-    source
-    },
-    homepage_url
-    import
-    incognito
-    input_components
-    key
-    minimum_chrome_version
+event_rules
+externally_connectable
+matches
+file_browser_handlers
+file_system_provider_capabilities
+configurable
+multiple_mounts
+source
+homepage_url
+import
+incognito
+input_components
+key
+minimum_chrome_version
     nacl_modules
     oauth2
     offline_enabled

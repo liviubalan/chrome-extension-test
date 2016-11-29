@@ -21,8 +21,8 @@ devtools.panels
     events
     extension
     extensionTypes
-    fileBrowserHandler
-    fileSystemProvider
+fileBrowserHandler
+fileSystemProvider
     fontSettings
     gcm
     history

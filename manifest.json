@@ -124,5 +124,24 @@
     "converted_from_user_script": "converted_from_user_script",*/
     /*// Doesn't do anything
     "current_locale": "ro",*/
-    "devtools_page": "html/devtools.html"
+    "devtools_page": "html/devtools.html",
+    /*// TODO: research declarativeWebRequest and declarativeContent
+    "event_rules": [],*/
+    /*// TODO: research about this
+    "externally_connectable": {},*/
+    /*// Works only on Chrome OS
+    "file_browser_handlers": [],*/
+    /*// Works only on Chrome OS
+    "file_system_provider_capabilities": {},*/
+    "homepage_url": "http://www.liviubalan.com/",
+    /*// TODO: research on this when it's needed
+    "import": [],*/
+    /*// TODO: research on this when it's needed*/
+    /*"incognito": "spanning",*/
+    /*"incognito": "split",*/
+    /*"incognito": "not_allowed,"*/
+    /*// No doc
+    "input_components": ""*/
+    /*"key": "icggacnennbdcdplekpajjokkabkgdih",*/
+    "minimum_chrome_version": "54.0.2840.100"
 }
