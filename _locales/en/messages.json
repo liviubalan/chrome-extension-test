@@ -2,6 +2,9 @@
     "manifest_name": {
         "message": "GoogleChromeExtensionTest"
     },
+    "manifest_short_name": {
+        "message": "GoogleChromeET"
+    },
     "manifest_description": {
         "message": "Google Chrome extension test."
     },

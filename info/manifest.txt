@@ -51,20 +51,19 @@ oauth2
 offline_enabled
 omnibox
 keyword
-    optional_permissions
-    options_page
-    options_ui
-    chrome_style
-    page
-    },
-    permissions
-    platforms
-    plugins
-    requirements
-    sandbox
-    short_name
-    signature
-    spellcheck
+optional_permissions
+options_page
+options_ui
+chrome_style
+page
+permissions
+platforms
+plugins
+requirements
+sandbox
+short_name
+signature
+spellcheck
     storage
     managed_schema
     },

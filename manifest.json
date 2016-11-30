@@ -158,5 +158,48 @@
     // To test this open a new tab and type "eemag" and hit tab key
     "omnibox": {
         "keyword": "eemag"
-    }
+    },
+    "optional_permissions": [
+        "tabs",
+        "http://www.google.com/"
+    ],
+    // See chrome://extensions/ Options button for GoogleChromeExtensionTest
+    "options_page": "html/options.html",
+    // At least until Chrome 40 is stable, you should specify both the options_ui and the options_page fields.
+    // Older versions of Chrome will only recognize options_page, and only open in tabs. Chrome 40 and onwards prefer
+    // to use the options_ui field if it's specified
+    "options_ui": {
+        "page": "html/options.html",
+        "chrome_style": true
+    },
+    "permissions": [
+        "storage"
+    ],
+    /*// No doc
+    "platforms": "",*/
+    /*// NPAPI is being phased out. Consider using alternatives
+    "plugins": [
+        {
+            "path": "extension_plugin.dll"
+        }
+    ],*/
+    /*"requirements": {
+        "3D": {
+            "features": [
+                "webgl"
+            ]
+        }
+    },*/
+    // TODO: research about this
+    "sandbox": {
+        "pages": [
+            "page.html"
+        ],
+        "content_security_policy": "sandbox allow-scripts; script-src https://www.google.com"
+    },
+    "short_name": "__MSG_manifest_short_name__"
+    /*// No doc
+    "signature": "test",*/
+    /*// Error: 'spellcheck' requires dev channel or newer
+    "spellcheck": "test",*/
 }
