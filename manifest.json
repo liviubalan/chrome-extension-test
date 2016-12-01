@@ -173,7 +173,8 @@
         "chrome_style": true
     },
     "permissions": [
-        "storage"
+        "storage",
+        "ttsEngine"
     ],
     /*// No doc
     "platforms": "",*/
@@ -197,9 +198,43 @@
         ],
         "content_security_policy": "sandbox allow-scripts; script-src https://www.google.com"
     },
-    "short_name": "__MSG_manifest_short_name__"
+    "short_name": "__MSG_manifest_short_name__",
     /*// No doc
     "signature": "test",*/
     /*// Error: 'spellcheck' requires dev channel or newer
     "spellcheck": "test",*/
+    /*// TODO: research on this when it's needed
+    "storage": {
+        "managed_schema": "json/schema.json"
+    },*/
+    /*// Error: 'system_indicator' requires dev channel or newer, but this is the stable channel
+    "system_indicator": "test",*/
+    /*// TODO: research on this when it's needed
+    "tts_engine": {
+        "voices": [
+            {
+                "voice_name": "Alice",
+                "lang": "en-US",
+                "gender": "female",
+                "event_types": [
+                    "start",
+                    "marker",
+                    "end"
+                ]
+            },
+            {
+                "voice_name": "Pat",
+                "lang": "en-US",
+                "event_types": [
+                    "end"
+                ]
+            }
+        ]
+    },*/
+    "version_name": "1.0 beta"/*,
+    // Doesn't work. Calling resources using chrome-extension:// currently works only for content_scripts.
+    // Eg: chrome://extensions/icggacnennbdcdplekpajjokkabkgdih/css/content_scripts.css
+    "web_accessible_resources": [
+        "info/manifest.txt"
+    ]*/
 }

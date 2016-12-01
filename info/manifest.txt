@@ -64,11 +64,10 @@ sandbox
 short_name
 signature
 spellcheck
-    storage
-    managed_schema
-    },
-    system_indicator
-    tts_engine
-    update_url
-    version_name
-    web_accessible_resources
+storage
+managed_schema
+system_indicator
+tts_engine
+update_url
+version_name
+web_accessible_resources
