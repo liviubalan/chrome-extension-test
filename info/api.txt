@@ -1,9 +1,9 @@
-    accessibilityFeatures
+accessibilityFeatures
     alarms
     bookmarks
 browserAction
     browsingData
-    certificateProvider
+certificateProvider
 commands
     contentSettings
     contextMenus
@@ -14,10 +14,10 @@ commands
 devtools.inspectedWindow
 devtools.network
 devtools.panels
-    documentScan
+documentScan
     downloads
-    enterprise.deviceAttributes
-    enterprise.platformKeys
+enterprise.deviceAttributes
+enterprise.platformKeys
     events
     extension
     extensionTypes
@@ -32,13 +32,13 @@ i18n
     input.ime
     instanceID
     management
-    networking.config
+networking.config
     notifications
     omnibox
 pageAction
     pageCapture
     permissions
-    platformKeys
+platformKeys
     power
     printerProvider
     privacy
@@ -55,8 +55,8 @@ pageAction
     tts
 ttsEngine
     types
-    vpnProvider
-    wallpaper
+vpnProvider
+wallpaper
     webNavigation
     webRequest
     webstore
