@@ -2,6 +2,23 @@ accessibilityFeatures
     alarms
     bookmarks
 browserAction
+    Types
+        ColorArray
+        ImageDataType
+    Methods
+        setTitle
+        getTitle
+        setIcon
+        setPopup
+        getPopup
+        setBadgeText
+        getBadgeText
+        setBadgeBackgroundColor
+        getBadgeBackgroundColor
+            enable
+            disable
+    Events
+        onClicked
     browsingData
 certificateProvider
 commands
