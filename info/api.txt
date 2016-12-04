@@ -1,6 +1,42 @@
 accessibilityFeatures
-    alarms
-    bookmarks
+alarms
+    Types
+        Alarm
+    Methods
+        create
+            get
+            getAll
+            clear
+            clearAll
+    Events
+        onAlarm
+bookmarks
+    Types
+            BookmarkTreeNodeUnmodifiable
+            BookmarkTreeNode
+            Properties
+            MAX_WRITE_OPERATIONS_PER_HOUR
+            MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE
+    Methods
+            get
+            getChildren
+            getRecent
+            getTree
+            getSubTree
+            search
+            create
+            move
+            update
+            remove
+            removeTree
+    Events
+        onCreated
+        onRemoved
+            onChanged
+            onMoved
+            onChildrenReordered
+            onImportBegan
+            onImportEnded
 browserAction
     Types
         ColorArray
@@ -22,6 +58,12 @@ browserAction
     browsingData
 certificateProvider
 commands
+    Types
+        Command
+    Methods
+        getAll
+    Events
+        onCommand
     contentSettings
     contextMenus
     cookies
@@ -61,13 +103,104 @@ platformKeys
     privacy
     proxy
     runtime
+        Types
+                Port
+                MessageSender
+                PlatformOs
+                PlatformArch
+                PlatformNaclArch
+                PlatformInfo
+                RequestUpdateCheckStatus
+                OnInstalledReason
+                OnRestartRequiredReason
+                Properties
+                lastError
+                id
+        Methods
+                getBackgroundPage
+                openOptionsPage
+                getManifest
+                getURL
+                setUninstallURL
+                reload
+                requestUpdateCheck
+                restart
+                restartAfterDelay
+                connect
+                connectNative
+            sendMessage
+                sendNativeMessage
+                getPlatformInfo
+                getPackageDirectoryEntry
+        Events
+                onStartup
+            onInstalled
+            onSuspend
+                onSuspendCanceled
+                onUpdateAvailable
+                onBrowserUpdateAvailable
+                onConnect
+                onConnectExternal
+            onMessage
+                onMessageExternal
+                onRestartRequired
     sessions
     storage
     system.cpu
     system.memory
     system.storage
     tabCapture
-    tabs
+tabs
+    Types
+            MutedInfoReason
+            MutedInfo
+            Tab
+            ZoomSettingsMode
+            ZoomSettingsScope
+            ZoomSettings
+            TabStatus
+            WindowType
+            Properties
+            TAB_ID_NONE
+    Methods
+            get
+            getCurrent
+            connect
+            sendRequest
+        sendMessage
+            getSelected
+            getAllInWindow
+        create
+            duplicate
+        query
+            highlight
+            update
+            move
+            reload
+            remove
+            detectLanguage
+            captureVisibleTab
+        executeScript
+            insertCSS
+            setZoom
+            getZoom
+            setZoomSettings
+            getZoomSettings
+            discard
+    Events
+            onCreated
+            onUpdated
+            onMoved
+            onSelectionChanged
+            onActiveChanged
+            onActivated
+            onHighlightChanged
+            onHighlighted
+            onDetached
+            onAttached
+            onRemoved
+            onReplaced
+            onZoomChange
     topSites
     tts
 ttsEngine

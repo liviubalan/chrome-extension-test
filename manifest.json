@@ -52,12 +52,14 @@
     /*// Error: 'automation' requires dev channel or newer, but this is the stable channel
     "automation": "Automation",*/
     "background": {
-        /*"scripts": [
-            "js/background.js"
-        ],*/
-        "page": "html/background.html"
-        /*// Recommended
-        "persistent": false*/
+        "scripts": [
+            /*"js/background.js"*/
+            /*"js/background-browserAction.js"*/
+            "js/background-tabs.js"
+        ],
+        /*"page": "html/background.html",*/
+        // Recommended
+        "persistent": false
     },
     /*// Error: 'background_page' requires manifest version of 1 or lower
     "background_page": "html/background.html",*/
@@ -159,10 +161,10 @@
     "omnibox": {
         "keyword": "eemag"
     },
-    "optional_permissions": [
+/*    "optional_permissions": [
         "tabs",
         "http://www.google.com/"
-    ],
+    ],*/
     // See chrome://extensions/ Options button for GoogleChromeExtensionTest
     "options_page": "html/options.html",
     // At least until Chrome 40 is stable, you should specify both the options_ui and the options_page fields.
@@ -173,8 +175,12 @@
         "chrome_style": true
     },
     "permissions": [
+        "alarms",
+        "bookmarks",
         "storage",
-        "ttsEngine"
+        "tabs",
+        "ttsEngine",
+        "*://*/*"
     ],
     /*// No doc
     "platforms": "",*/
