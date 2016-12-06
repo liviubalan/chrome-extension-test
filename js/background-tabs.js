@@ -126,6 +126,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 }
             });
             break;
+        case "chrome.tabs.detectLanguage":
+            console.warn("chrome.tabs.detectLanguage");
+            chrome.tabs.detectLanguage(function (language) {
+                console.log(language);
+            });
+            break;
     }
 });
 
@@ -136,6 +142,11 @@ chrome.runtime.onStartup.addListener(function () {
 
 chrome.runtime.onSuspend.addListener(function () {
     console.warn("chrome.runtime.onSuspend.addListener");
+});
+
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+    console.warn("chrome.tabs.onActivated.addListener");
+    console.log(activeInfo);
 });
 
 // Triggered when tab content changes (new tab, url)

@@ -36,6 +36,10 @@ addButton("Activate Google tab", function () {
     chrome.runtime.sendMessage({action: "chrome.tabs.update.google"});
 });
 
+addButton("Detect language", function () {
+    chrome.runtime.sendMessage({action: "chrome.tabs.detectLanguage"});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

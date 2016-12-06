@@ -191,7 +191,7 @@ tabs
             move
             reload
             remove
-            detectLanguage
+        detectLanguage
             captureVisibleTab
         executeScript
             insertCSS
@@ -204,9 +204,9 @@ tabs
             onCreated
         onUpdated
             onMoved
-            onSelectionChanged
+        onSelectionChanged
             onActiveChanged
-            onActivated
+        onActivated
             onHighlightChanged
             onHighlighted
             onDetached
