@@ -67,7 +67,20 @@ commands
     contentSettings
     contextMenus
     cookies
-    debugger
+debugger
+    Types
+        Debuggee
+            TargetInfoType
+            DetachReason
+            TargetInfo
+    Methods
+        attach
+        detach
+        sendCommand
+            getTargets
+    Events
+        onEvent
+        onDetach
     declarativeContent
     desktopCapture
 devtools.inspectedWindow
@@ -114,7 +127,7 @@ platformKeys
                 OnInstalledReason
                 OnRestartRequiredReason
                 Properties
-                lastError
+            lastError
                 id
         Methods
                 getBackgroundPage

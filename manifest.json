@@ -177,6 +177,7 @@
     "permissions": [
         "alarms",
         "bookmarks",
+        "debugger",
         "storage",
         "tabs",
         "ttsEngine",
