@@ -4,10 +4,10 @@ alarms
         Alarm
     Methods
         create
-            get
-            getAll
-            clear
-            clearAll
+        get
+        getAll
+        clear
+        clearAll
     Events
         onAlarm
 bookmarks
@@ -133,7 +133,7 @@ platformKeys
                 getPlatformInfo
                 getPackageDirectoryEntry
         Events
-                onStartup
+            onStartup
             onInstalled
             onSuspend
                 onSuspendCanceled
@@ -169,12 +169,12 @@ tabs
             sendRequest
         sendMessage
             getSelected
-            getAllInWindow
+        getAllInWindow
         create
             duplicate
         query
             highlight
-            update
+        update
             move
             reload
             remove
@@ -189,7 +189,7 @@ tabs
             discard
     Events
             onCreated
-            onUpdated
+        onUpdated
             onMoved
             onSelectionChanged
             onActiveChanged
@@ -207,7 +207,23 @@ ttsEngine
     types
 vpnProvider
 wallpaper
-    webNavigation
+webNavigation
+    Types
+            TransitionType
+            TransitionQualifier
+            Methods
+            getFrame
+            getAllFrames
+            Events
+            onBeforeNavigate
+            onCommitted
+        onDOMContentLoaded
+            onCompleted
+            onErrorOccurred
+            onCreatedNavigationTarget
+        onReferenceFragmentUpdated
+            onTabReplaced
+            onHistoryStateUpdated
     webRequest
     webstore
     windows

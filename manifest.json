@@ -180,6 +180,7 @@
         "storage",
         "tabs",
         "ttsEngine",
+        "webNavigation",
         "*://*/*"
     ],
     /*// No doc

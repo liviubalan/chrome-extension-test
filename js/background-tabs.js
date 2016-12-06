@@ -72,18 +72,95 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     /*console.log("chrome.runtime.onMessage.addListener");
-    console.log(message);
-    console.log(sender);
-    console.log(sendResponse);*/
+     console.log(message);
+     console.log(sender);
+     console.log(sendResponse);*/
     switch (message.action) {
         case "chrome.alarms.create":
+            console.warn("chrome.alarms.create");
             chrome.alarms.create("", {
                 delayInMinutes: 0.1
+            });
+            break;
+        case "chrome.alarms.create.alarm_1":
+            console.warn("chrome.alarms.create.alarm_1");
+            chrome.alarms.create("alarm_1", {
+                delayInMinutes: 0.5
+            });
+            break;
+        case "chrome.alarms.get.alarm_1":
+            console.warn("chrome.alarms.get.alarm_1");
+            chrome.alarms.get('alarm_1', function (alarm) {
+                console.log(alarm);
+            });
+            break;
+        case "chrome.alarms.clear.alarm_1":
+            console.warn("chrome.alarms.clear.alarm_1");
+            chrome.alarms.clear('alarm_1', function (wasCleared) {
+                console.log(wasCleared);
+            });
+            break;
+        case "chrome.alarms.clear.alarms":
+            console.warn("chrome.alarms.clear.alarms");
+            chrome.alarms.clearAll(function (wasCleared) {
+                console.log(wasCleared);
+            });
+            break;
+        case "chrome.alarms.get.alarms":
+            console.warn("chrome.alarms.get.alarms");
+            chrome.alarms.getAll(function (alarms) {
+                console.log(alarms);
+            });
+            break;
+        case "chrome.tabs.update.google":
+            console.warn("chrome.tabs.update.google");
+            chrome.tabs.query({
+                currentWindow: true
+            }, function (tabs) {
+                for (i = 0; i < tabs.length; i++) {
+                    if (tabs[i].url.indexOf("google") !== false) {
+                        console.log(tabs[i]);
+                        chrome.tabs.update(tabs[i].id, {selected: true});
+                        return;
+                    }
+                }
             });
             break;
     }
 });
 
-chrome.runtime.onSuspend.addListener(function () {
-    alert("chrome.runtime.onSuspend.addListener");
+// I cannot trigger this event
+chrome.runtime.onStartup.addListener(function () {
+    alert("chrome.runtime.onStartup.addListener");
 });
+
+chrome.runtime.onSuspend.addListener(function () {
+    console.warn("chrome.runtime.onSuspend.addListener");
+});
+
+// Triggered when tab content changes (new tab, url)
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    console.warn("chrome.tabs.onUpdated.addListener");
+    console.log(tabId);
+    console.log(changeInfo);
+    console.log(tab);
+});
+
+var filters = {
+    url: [{urlContains: "emag.ro"}]
+};
+
+/**
+ * This event is trigger on http://www.emag.ro/
+ * On https://developer.chrome.com/extensions/webNavigation#event-onDOMContentLoaded the 2nd param (filters)
+ * is not specified
+ */
+chrome.webNavigation.onDOMContentLoaded.addListener(function (details) {
+    console.warn("chrome.webNavigation.onDOMContentLoaded.addListener");
+    console.log(details);
+    // Triggered when #anchor value change
+    chrome.webNavigation.onReferenceFragmentUpdated.addListener(function (details) {
+        console.warn("chrome.webNavigation.onReferenceFragmentUpdated.addListener");
+        console.log(details);
+    }, filters);
+}, filters);
