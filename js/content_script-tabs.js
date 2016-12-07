@@ -40,6 +40,15 @@ addButton("Detect language", function () {
     chrome.runtime.sendMessage({action: "chrome.tabs.detectLanguage"});
 });
 
+addButton("Get idle state2", function () {
+    chrome.runtime.sendMessage({action: "chrome.idle.queryState"});
+});
+
+addButton("Get background page", function () {
+    chrome.runtime.sendMessage({action: "chrome.extension.getBackgroundPage"});
+});
+
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

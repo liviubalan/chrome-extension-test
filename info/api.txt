@@ -91,7 +91,24 @@ documentScan
 enterprise.deviceAttributes
 enterprise.platformKeys
     events
-    extension
+extension
+    Types
+            ViewType
+            Properties
+            lastError
+            inIncognitoContext
+    Methods
+            sendRequest
+            getURL
+            getViews
+        getBackgroundPage
+            getExtensionTabs
+            isAllowedIncognitoAccess
+            isAllowedFileSchemeAccess
+            setUpdateUrlData
+    Events
+            onRequest
+            onRequestExternal
     extensionTypes
 fileBrowserHandler
 fileSystemProvider
@@ -100,7 +117,14 @@ fileSystemProvider
     history
 i18n
     identity
-    idle
+idle
+    Types
+        IdleState
+    Methods
+        queryState
+            setDetectionInterval
+    Events
+        onStateChanged
     input.ime
     instanceID
     management

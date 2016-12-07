@@ -65,6 +65,12 @@ chrome.commands.onCommand.addListener(function (command) {
     console.log(command);
 });
 
+// In order to trigger this event wait for a while
+chrome.idle.onStateChanged.addListener(function (newState) {
+    console.warn("chrome.idle.onStateChanged.addListener");
+    console.log(newState);
+});
+
 chrome.runtime.onInstalled.addListener(function (details) {
     console.warn("chrome.runtime.onInstalled.addListener");
     console.log(details);
@@ -111,6 +117,17 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
             chrome.alarms.getAll(function (alarms) {
                 console.log(alarms);
             });
+            break;
+        case "chrome.idle.queryState":
+            console.warn("chrome.idle.queryState");
+            chrome.idle.queryState(30, function(state) {
+                console.log(state);
+            });
+            break;
+        case "chrome.extension.getBackgroundPage":
+            console.warn("chrome.extension.getBackgroundPage");
+            var w = chrome.extension.getBackgroundPage();
+            console.log(w);
             break;
         case "chrome.tabs.update.google":
             console.warn("chrome.tabs.update.google");

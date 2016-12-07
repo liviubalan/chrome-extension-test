@@ -178,6 +178,7 @@
         "alarms",
         "bookmarks",
         "debugger",
+        "idle",
         "storage",
         "tabs",
         "ttsEngine",
