@@ -213,7 +213,17 @@ storage
     system.cpu
     system.memory
     system.storage
-    tabCapture
+tabCapture
+    Types
+            CaptureInfo
+            MediaStreamConstraint
+            CaptureOptions
+    Methods
+        capture
+            getCapturedTabs
+            captureOffscreenTab
+    Events
+            onStatusChanged
 tabs
     Types
             MutedInfoReason
