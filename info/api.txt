@@ -116,6 +116,13 @@ fileSystemProvider
     gcm
     history
 i18n
+    Types
+            LanguageCode
+    Methods
+            getAcceptLanguages
+        getMessage
+            getUILanguage
+            detectLanguage
     identity
 idle
     Types
@@ -135,7 +142,12 @@ pageAction
     pageCapture
     permissions
 platformKeys
-    power
+power
+    Types
+        Level
+    Methods
+        requestKeepAwake
+        releaseKeepAwake
     printerProvider
     privacy
     proxy
@@ -182,7 +194,22 @@ platformKeys
                 onMessageExternal
                 onRestartRequired
     sessions
-    storage
+storage
+    Types
+            StorageChange
+        StorageArea
+            methods
+                 get
+                    getBytesInUse
+                set
+                    remove
+                    clear
+    Properties
+            sync
+            local
+            managed
+    Events
+            onChanged
     system.cpu
     system.memory
     system.storage

@@ -48,6 +48,13 @@ addButton("Get background page", function () {
     chrome.runtime.sendMessage({action: "chrome.extension.getBackgroundPage"});
 });
 
+addButton("Set storage", function () {
+    chrome.runtime.sendMessage({action: "chrome.storage.sync.set"});
+});
+
+addButton("Get storage", function () {
+    chrome.runtime.sendMessage({action: "chrome.storage.sync.get"});
+});
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");

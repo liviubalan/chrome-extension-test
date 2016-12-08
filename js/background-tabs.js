@@ -120,7 +120,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
             break;
         case "chrome.idle.queryState":
             console.warn("chrome.idle.queryState");
-            chrome.idle.queryState(30, function(state) {
+            chrome.idle.queryState(30, function (state) {
                 console.log(state);
             });
             break;
@@ -149,12 +149,26 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 console.log(language);
             });
             break;
+        case "chrome.storage.sync.set":
+            var date = new Date().toLocaleString();
+            var data = {
+                "date": date
+            };
+            chrome.storage.sync.set(data, function () {
+                console.warn("chrome.storage.sync.set");
+            });
+            break;
+        case "chrome.storage.sync.get":
+            console.warn("chrome.storage.sync.get");
+            chrome.storage.sync.get("date", function (items) {
+                console.log(items);
+            });
+            break;
     }
 });
 
-// I cannot trigger this event
 chrome.runtime.onStartup.addListener(function () {
-    alert("chrome.runtime.onStartup.addListener");
+    onsole.warn("chrome.runtime.onStartup.addListener");
 });
 
 chrome.runtime.onSuspend.addListener(function () {
