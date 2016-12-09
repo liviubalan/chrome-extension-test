@@ -164,6 +164,28 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 console.log(items);
             });
             break;
+        case "chrome.tabs.captureVisibleTab":
+            console.warn("chrome.tabs.captureVisibleTab");
+            chrome.tabs.captureVisibleTab(function (screenshotUrl) {
+                var viewTabUrl = chrome.extension.getURL("html/image.html?id=2")
+                chrome.tabs.create({
+                    url: viewTabUrl
+                });
+
+                chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+                    if (changeInfo.status == 'complete' && tab.url == viewTabUrl) {
+                        var views = chrome.extension.getViews();
+                        for (var i = 0; i < views.length; i++) {
+                            var view = views[i];
+                            if (view.location.href == viewTabUrl) {
+                                view.setScreenshotUrl(screenshotUrl);
+                                break;
+                            }
+                        }
+                    }
+                });
+            });
+            break;
     }
 });
 

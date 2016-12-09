@@ -56,6 +56,10 @@ addButton("Get storage", function () {
     chrome.runtime.sendMessage({action: "chrome.storage.sync.get"});
 });
 
+addButton("Capture visible tab", function () {
+    chrome.runtime.sendMessage({action: "chrome.tabs.captureVisibleTab"});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

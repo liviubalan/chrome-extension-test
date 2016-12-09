@@ -99,8 +99,8 @@ extension
             inIncognitoContext
     Methods
             sendRequest
-            getURL
-            getViews
+        getURL
+        getViews
         getBackgroundPage
             getExtensionTabs
             isAllowedIncognitoAccess
@@ -253,7 +253,7 @@ tabs
             reload
             remove
         detectLanguage
-            captureVisibleTab
+        captureVisibleTab
         executeScript
             insertCSS
             setZoom

@@ -175,6 +175,7 @@
         "chrome_style": true
     },
     "permissions": [
+        "activeTab",
         "alarms",
         "bookmarks",
         "debugger",
