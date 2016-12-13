@@ -175,7 +175,7 @@ power
                 requestUpdateCheck
                 restart
                 restartAfterDelay
-                connect
+            connect
                 connectNative
             sendMessage
                 sendNativeMessage
@@ -188,7 +188,7 @@ power
                 onSuspendCanceled
                 onUpdateAvailable
                 onBrowserUpdateAvailable
-                onConnect
+            onConnect
                 onConnectExternal
             onMessage
                 onMessageExternal
