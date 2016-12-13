@@ -60,6 +60,11 @@ addButton("Capture visible tab", function () {
     chrome.runtime.sendMessage({action: "chrome.tabs.captureVisibleTab"});
 });
 
+// Open multiple windows browser to see how it works
+addButton("Merge windows", function () {
+    chrome.runtime.sendMessage({action: "chrome.windows.getCurrent"});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

@@ -249,7 +249,7 @@ tabs
         query
             highlight
         update
-            move
+        move
             reload
             remove
         detectLanguage
@@ -300,4 +300,24 @@ webNavigation
             onHistoryStateUpdated
     webRequest
     webstore
-    windows
+windows
+    Types
+            WindowType
+            WindowState
+            Window
+            CreateType
+    Properties
+            WINDOW_ID_NONE
+            WINDOW_ID_CURRENT
+    Methods
+            get
+        getCurrent
+            getLastFocused
+        getAll
+            create
+            update
+            remove
+    Events
+            onCreated
+            onRemoved
+            onFocusChanged

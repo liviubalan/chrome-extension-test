@@ -186,6 +186,29 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 });
             });
             break;
+        case "chrome.windows.getCurrent":
+            console.warn("chrome.windows.getCurrent");
+            chrome.windows.getCurrent({}, function (windowCurrent) {
+                chrome.windows.getAll({}, function (windows) {
+                    var windowsLength = windows.length;
+                    for (var i = 0; i < windowsLength; i++) {
+                        if (windows[i].id != windowCurrent.id) {
+                            chrome.tabs.query({
+                                "windowId": windows[i].id
+                            }, function (tabs) {
+                                var tabsLength = tabs.length;
+                                for (var j = 0; j < tabsLength; j++) {
+                                    chrome.tabs.move(tabs[j].id, {
+                                        "windowId": windowCurrent.id,
+                                        "index": -1
+                                    });
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+            break;
     }
 });
 
