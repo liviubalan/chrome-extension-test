@@ -65,6 +65,10 @@ addButton("Merge windows", function () {
     chrome.runtime.sendMessage({action: "chrome.windows.getCurrent"});
 });
 
+addButton("Synthesized text-to-speech (TTS)", function () {
+    chrome.runtime.sendMessage({action: "chrome.tts.getVoices"});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

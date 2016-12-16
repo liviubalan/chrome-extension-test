@@ -98,18 +98,18 @@ extension
             lastError
             inIncognitoContext
     Methods
-            sendRequest
+        sendRequest
         getURL
         getViews
         getBackgroundPage
-            getExtensionTabs
+        getExtensionTabs
             isAllowedIncognitoAccess
             isAllowedFileSchemeAccess
             setUpdateUrlData
     Events
-            onRequest
-            onRequestExternal
-    extensionTypes
+        onRequest
+        onRequestExternal
+extensionTypes
 fileBrowserHandler
 fileSystemProvider
     fontSettings
@@ -240,9 +240,9 @@ tabs
             get
             getCurrent
             connect
-            sendRequest
+        sendRequest
         sendMessage
-            getSelected
+        getSelected
         getAllInWindow
         create
             duplicate
@@ -266,9 +266,9 @@ tabs
         onUpdated
             onMoved
         onSelectionChanged
-            onActiveChanged
+        onActiveChanged
         onActivated
-            onHighlightChanged
+        onHighlightChanged
             onHighlighted
             onDetached
             onAttached
@@ -276,7 +276,19 @@ tabs
             onReplaced
             onZoomChange
     topSites
-    tts
+tts
+    Types
+            EventType
+            VoiceGender
+            TtsEvent
+            TtsVoice
+    Methods
+        speak
+            stop
+            pause
+            resume
+            isSpeaking
+        getVoices
 ttsEngine
     types
 vpnProvider

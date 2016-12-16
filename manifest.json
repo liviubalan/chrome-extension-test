@@ -182,6 +182,7 @@
         "idle",
         "storage",
         "tabs",
+        "tts",
         "ttsEngine",
         "webNavigation",
         "*://*/*"

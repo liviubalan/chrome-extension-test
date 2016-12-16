@@ -209,6 +209,19 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 });
             });
             break;
+        case "chrome.tts.getVoices":
+            console.warn("chrome.tts.getVoices");
+            chrome.tts.getVoices(function (voices) {
+                console.log(voices);
+                var voice_i = getRandomInteger(0, voices.length);
+                var voice = voices[voice_i];
+                chrome.tts.speak('Hello world!', {
+                    voiceName: voice.voiceName,
+                    lang: voice.lang,
+                    gender: voice.gender
+                });
+            });
+            break;
     }
 });
 
@@ -251,3 +264,7 @@ chrome.webNavigation.onDOMContentLoaded.addListener(function (details) {
         console.log(details);
     }, filters);
 }, filters);
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (1 + max - min)) + min;
+}
