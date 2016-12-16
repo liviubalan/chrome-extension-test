@@ -55,7 +55,25 @@ browserAction
             disable
     Events
         onClicked
-    browsingData
+browsingData
+    Types
+        RemovalOptions
+        DataTypeSet
+    Methods
+        settings
+        remove
+        removeAppcache
+        removeCache
+        removeCookies
+        removeDownloads
+        removeFileSystems
+        removeFormData
+        removeHistory
+        removeIndexedDB
+        removeLocalStorage
+        removePluginData
+        removePasswords
+        removeWebSQL
 certificateProvider
 commands
     Types

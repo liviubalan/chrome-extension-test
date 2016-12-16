@@ -222,6 +222,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 });
             });
             break;
+        case "chrome.browsingData.settings":
+            console.warn("chrome.browsingData.settings");
+            chrome.browsingData.settings(function (result) {
+                console.log(result);
+            })
+            break;
     }
 });
 

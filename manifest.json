@@ -178,6 +178,7 @@
         "activeTab",
         "alarms",
         "bookmarks",
+        "browsingData",
         "debugger",
         "idle",
         "storage",
