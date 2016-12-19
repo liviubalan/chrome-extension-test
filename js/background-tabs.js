@@ -96,13 +96,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
             break;
         case "chrome.alarms.get.alarm_1":
             console.warn("chrome.alarms.get.alarm_1");
-            chrome.alarms.get('alarm_1', function (alarm) {
+            chrome.alarms.get("alarm_1", function (alarm) {
                 console.log(alarm);
             });
             break;
         case "chrome.alarms.clear.alarm_1":
             console.warn("chrome.alarms.clear.alarm_1");
-            chrome.alarms.clear('alarm_1', function (wasCleared) {
+            chrome.alarms.clear("alarm_1", function (wasCleared) {
                 console.log(wasCleared);
             });
             break;
@@ -173,7 +173,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 });
 
                 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-                    if (changeInfo.status == 'complete' && tab.url == viewTabUrl) {
+                    if (changeInfo.status == "complete" && tab.url == viewTabUrl) {
                         var views = chrome.extension.getViews();
                         for (var i = 0; i < views.length; i++) {
                             var view = views[i];
@@ -215,7 +215,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 console.log(voices);
                 var voice_i = getRandomInteger(0, voices.length);
                 var voice = voices[voice_i];
-                chrome.tts.speak('Hello world!', {
+                chrome.tts.speak("Hello world!", {
                     voiceName: voice.voiceName,
                     lang: voice.lang,
                     gender: voice.gender
@@ -233,13 +233,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 var current = tabs[0];
                 incognito = current.incognito;
                 url = current.url;
-                var types = ['cookies', 'images', 'javascript', 'location', 'plugins',
-                    'popups', 'notifications', 'microphone', 'camera',
-                    'unsandboxedPlugins', 'automaticDownloads'];
+                var types = ["cookies", "images", "javascript", "location", "plugins",
+                    "popups", "notifications", "microphone", "camera",
+                    "unsandboxedPlugins", "automaticDownloads"];
                 types.forEach(function (type) {
                     chrome.contentSettings[type] && chrome.contentSettings[type].get({
-                            'primaryUrl': url,
-                            'incognito': incognito
+                            "primaryUrl": url,
+                            "incognito": incognito
                         },
                         function (details) {
                             console.log(details);
@@ -274,6 +274,44 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 var filters = {
     url: [{urlContains: "emag.ro"}]
 };
+
+function contextMenuOnClick(info, tab) {
+    console.log(info);
+    console.log(tab);
+}
+
+chrome.contextMenus.create({
+    id: "contextMenuEmag1",
+    title: "normal 1",
+    contexts: ["all"]
+});
+var contextMenuEmag2 = chrome.contextMenus.create({
+    id: "contextMenuEmag2",
+    title: "normal 2",
+    contexts: ["all"]
+});
+chrome.contextMenus.create({
+    id: "contextMenuEmag21",
+    title: "normal 21",
+    contexts: ["all"],
+    parentId: contextMenuEmag2
+});
+chrome.contextMenus.create({
+    id: "contextMenuEmag22",
+    title: "normal 22",
+    contexts: ["all"],
+    parentId: contextMenuEmag2
+});
+chrome.contextMenus.create({
+    "type": "radio",
+    id: "contextMenuEmag3",
+    "title": "Radio 3"
+});
+chrome.contextMenus.create({
+    "type": "checkbox",
+    id: "contextMenuEmag4",
+    "title": "checkbox 4"
+});
 
 /**
  * This event is trigger on http://www.emag.ro/

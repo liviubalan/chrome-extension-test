@@ -179,6 +179,7 @@
         "alarms",
         "bookmarks",
         "browsingData",
+        "contextMenus",
         "contentSettings",
         "debugger",
         "idle",

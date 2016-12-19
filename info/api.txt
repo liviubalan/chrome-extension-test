@@ -119,7 +119,19 @@ contentSettings
         get
         set
             getResourceIdentifiers
-    contextMenus
+contextMenus
+    Types
+        ContextType
+            ItemType
+    Properties
+            ACTION_MENU_TOP_LEVEL_LIMIT
+    Methods
+        create
+            update
+            remove
+            removeAll
+            Events
+            onClicked
     cookies
 debugger
     Types
