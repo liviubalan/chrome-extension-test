@@ -82,7 +82,43 @@ commands
         getAll
     Events
         onCommand
-    contentSettings
+contentSettings
+    Types
+            ResourceIdentifier
+            Scope
+            ContentSetting
+            CookiesContentSetting
+            ImagesContentSetting
+            JavascriptContentSetting
+            LocationContentSetting
+            PluginsContentSetting
+            PopupsContentSetting
+            NotificationsContentSetting
+            FullscreenContentSetting
+            MouselockContentSetting
+            MicrophoneContentSetting
+            CameraContentSetting
+            PpapiBrokerContentSetting
+            MultipleAutomaticDownloadsContentSetting
+    Properties
+            cookies
+            images
+            javascript
+            location
+            plugins
+            popups
+            notifications
+            fullscreen
+            mouselock
+            microphone
+            camera
+            unsandboxedPlugins
+            automaticDownloads
+    Methods
+            clear
+        get
+        set
+            getResourceIdentifiers
     contextMenus
     cookies
 debugger
@@ -263,7 +299,7 @@ tabs
         getSelected
         getAllInWindow
         create
-            duplicate
+        duplicate
         query
             highlight
         update

@@ -73,6 +73,14 @@ addButton("BrowsingData settings", function () {
     chrome.runtime.sendMessage({action: "chrome.browsingData.settings"});
 });
 
+addButton("BrowsingData settings", function () {
+    chrome.runtime.sendMessage({action: "chrome.ContentSetting.get"});
+});
+
+addButton("chrome.ContentSetting.get", function () {
+    chrome.runtime.sendMessage({action: "chrome.ContentSetting.get"});
+});
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     console.log("chrome.runtime.onMessage.addListener");
     console.log(message);

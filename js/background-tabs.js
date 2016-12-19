@@ -228,6 +228,25 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 console.log(result);
             })
             break;
+        case "chrome.ContentSetting.get":
+            chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+                var current = tabs[0];
+                incognito = current.incognito;
+                url = current.url;
+                var types = ['cookies', 'images', 'javascript', 'location', 'plugins',
+                    'popups', 'notifications', 'microphone', 'camera',
+                    'unsandboxedPlugins', 'automaticDownloads'];
+                types.forEach(function (type) {
+                    chrome.contentSettings[type] && chrome.contentSettings[type].get({
+                            'primaryUrl': url,
+                            'incognito': incognito
+                        },
+                        function (details) {
+                            console.log(details);
+                        });
+                });
+            });
+            break;
     }
 });
 
