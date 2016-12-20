@@ -131,7 +131,7 @@ contextMenus
             remove
             removeAll
             Events
-            onClicked
+        onClicked
     cookies
 debugger
     Types
@@ -153,7 +153,36 @@ devtools.inspectedWindow
 devtools.network
 devtools.panels
 documentScan
-    downloads
+downloads
+    Types
+            FilenameConflictAction
+            InterruptReason
+            DangerType
+            State
+            DownloadItem
+            StringDelta
+            DoubleDelta
+            BooleanDelta
+    Methods
+        download
+            search
+            pause
+            resume
+            cancel
+            getFileIcon
+        open
+            show
+            showDefaultFolder
+            erase
+            removeFile
+            acceptDanger
+            drag
+            setShelfEnabled
+    Events
+            onCreated
+            onErased
+        onChanged
+            onDeterminingFilename
 enterprise.deviceAttributes
 enterprise.platformKeys
     events
@@ -217,48 +246,48 @@ power
     printerProvider
     privacy
     proxy
-    runtime
-        Types
-                Port
-                MessageSender
-                PlatformOs
-                PlatformArch
-                PlatformNaclArch
-                PlatformInfo
-                RequestUpdateCheckStatus
-                OnInstalledReason
-                OnRestartRequiredReason
-                Properties
-            lastError
-                id
-        Methods
-                getBackgroundPage
-                openOptionsPage
-                getManifest
-                getURL
-                setUninstallURL
-                reload
-                requestUpdateCheck
-                restart
-                restartAfterDelay
-            connect
-                connectNative
-            sendMessage
-                sendNativeMessage
-                getPlatformInfo
-                getPackageDirectoryEntry
-        Events
-            onStartup
-            onInstalled
-            onSuspend
-                onSuspendCanceled
-                onUpdateAvailable
-                onBrowserUpdateAvailable
-            onConnect
-                onConnectExternal
-            onMessage
-                onMessageExternal
-                onRestartRequired
+runtime
+    Types
+            Port
+            MessageSender
+            PlatformOs
+            PlatformArch
+            PlatformNaclArch
+            PlatformInfo
+            RequestUpdateCheckStatus
+            OnInstalledReason
+            OnRestartRequiredReason
+            Properties
+        lastError
+            id
+    Methods
+            getBackgroundPage
+            openOptionsPage
+            getManifest
+            getURL
+            setUninstallURL
+            reload
+            requestUpdateCheck
+            restart
+            restartAfterDelay
+        connect
+            connectNative
+        sendMessage
+            sendNativeMessage
+            getPlatformInfo
+            getPackageDirectoryEntry
+    Events
+        onStartup
+        onInstalled
+        onSuspend
+            onSuspendCanceled
+            onUpdateAvailable
+            onBrowserUpdateAvailable
+        onConnect
+            onConnectExternal
+        onMessage
+            onMessageExternal
+            onRestartRequired
     sessions
 storage
     Types
